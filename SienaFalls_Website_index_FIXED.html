@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siena Falls: Strategic Consulting for Catholic Women in Business</title>
+<meta name="description" content="Strategic consulting for Catholic women entrepreneurs past the startup phase. A clear diagnosis, a growth plan, and a 90-day action plan, delivered in days, not months.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --dark:       #0D1825;
+      --dark-2:     #16253A;
+      --bg:         #F4F5F1;
+      --bg-alt:     #E8EAE4;
+      --forest:     #2B5E3A;
+      --forest-lt:  #4A8A52;
+      --sky:        #3D7EA8;
+      --sky-lt:     #6AA0C0;
+      --gold:       #C4A215;
+      --gold-lt:    #D4B820;
+      --mauve:      #7A5278;
+      --text:       #141E2A;
+      --text-mid:   #3A4A58;
+      --text-lt:    #6A7A88;
+      --rule:       #C8CCC6;
+      --white:      #FAFAF8;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Lato', sans-serif;
+      font-kerning: normal;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(13, 24, 37, 0.82);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(250,250,248,0.07);
+      padding: 0 2.5rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.4s, border-color 0.4s;
+    }
+    nav.scrolled {
+      background: rgba(244, 245, 241, 0.97);
+      border-bottom-color: var(--rule);
+    }
+    .nav-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      transition: color 0.4s;
+    }
+    nav.scrolled .nav-brand { color: var(--forest); }
+    .nav-links { display: flex; gap: 2.25rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: rgba(250,250,248,0.6);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    nav.scrolled .nav-links a { color: var(--text-mid); }
+    .nav-links a:hover { color: var(--white); }
+    nav.scrolled .nav-links a:hover { color: var(--forest); }
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 9rem 2rem 10rem;
+      position: relative;
+      overflow: hidden;
+      background: var(--dark);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--sky-lt);
+      margin-bottom: 1.75rem;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.6rem, 6.5vw, 4.6rem);
+      font-weight: 500;
+      color: var(--white);
+      line-height: 1.22;
+      max-width: 800px;
+      margin-bottom: 2rem;
+      letter-spacing: 0.02em;
+      word-spacing: 0.06em;
+    }
+    .hero h1 em {
+      font-style: italic;
+      font-kerning: normal;
+      color: var(--gold-lt);
+    }
+    .hero-ornament {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+    .hero-ornament-line { width: 40px; height: 1px; background: var(--sky); opacity: 0.5; }
+    .hero-ornament-dot  { width: 5px; height: 5px; border-radius: 50%; background: var(--sky); opacity: 0.5; }
+    .hero p {
+      font-size: 1.1rem;
+      color: rgba(250,250,248,0.62);
+      max-width: 540px;
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+    .hero-ctas {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: var(--forest);
+      color: var(--white);
+      padding: 0.95rem 2.6rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .hero-cta:hover { background: var(--forest-lt); }
+    .hero-cta-secondary {
+      font-size: 0.82rem;
+      color: rgba(250,250,248,0.38);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      border-bottom: 1px solid rgba(250,250,248,0.15);
+      padding-bottom: 0.1rem;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .hero-cta-secondary:hover {
+      color: rgba(250,250,248,0.7);
+      border-color: rgba(250,250,248,0.4);
+    }
+    .hero-waves {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 140px;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .wave {
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 200%;
+      height: 100%;
+    }
+    .wave svg {
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .wave-1 { animation: wave-drift 26s linear infinite; }
+    .wave-2 { animation: wave-drift 19s linear infinite reverse; }
+    .wave-3 { animation: wave-drift 14s linear infinite; }
+    @keyframes wave-drift {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    section { padding: 6rem 2rem; }
+    .container { max-width: 880px; margin: 0 auto; }
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--forest);
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      font-weight: 500;
+      color: var(--dark);
+      line-height: 1.18;
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+    .section-rule {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 2.25rem;
+    }
+    .rule-line { width: 32px; height: 1px; background: var(--gold); }
+    .rule-dot  { width: 4px; height: 4px; border-radius: 50%; background: var(--gold); }
+    .section-intro {
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      line-height: 1.85;
+      margin-bottom: 3rem;
+      max-width: 680px;
+    }
+    #problem {
+      background: var(--bg-alt);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+    .problem-item {
+      padding: 1.5rem 1.75rem;
+      border-left: 2px solid var(--sky);
+      background: var(--white);
+    }
+    .problem-item p {
+      font-size: 0.95rem;
+      color: var(--text-mid);
+      line-height: 1.75;
+      font-style: italic;
+    }
+    #services { background: var(--white); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .service-card {
+      border: 1px solid var(--rule);
+      padding: 2.25rem 2rem;
+      background: var(--bg);
+      transition: border-color 0.2s;
+    }
+    .service-card:hover { border-color: var(--sky); }
+    .service-card.featured {
+      border-color: var(--forest);
+      background: var(--white);
+    }
+    .service-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--sky);
+      padding: 0.28rem 0.65rem;
+      margin-bottom: 1.25rem;
+    }
+    .service-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--dark);
+      margin-bottom: 0.4rem;
+    }
+    .service-price {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.03em;
+      margin-bottom: 1.25rem;
+    }
+    .service-desc {
+      font-size: 0.95rem;
+      color: var(--text-mid);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+    .service-includes { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .service-includes li {
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      padding-left: 1.25rem;
+      position: relative;
+      line-height: 1.5;
+    }
+    .service-includes li::before {
+      content: '\2013';
+      position: absolute;
+      left: 0;
+      color: var(--forest);
+      font-size: 0.8rem;
+    }
+    #work {
+      background: var(--bg);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+    .case-study {
+      border: 1px solid var(--rule);
+      background: var(--white);
+      margin-bottom: 1.75rem;
+      overflow: hidden;
+    }
+    .case-study:last-child { margin-bottom: 0; }
+    .cs-header {
+      background: var(--dark-2);
+      padding: 1.75rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .cs-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--sky-lt);
+      margin-bottom: 0.45rem;
+    }
+    .cs-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--white);
+      letter-spacing: -0.01em;
+    }
+    .cs-tag {
+      font-size: 0.72rem;
+      color: rgba(250,250,248,0.35);
+      white-space: nowrap;
+      padding-top: 0.5rem;
+      text-align: right;
+      line-height: 1.6;
+    }
+    .cs-body {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+    .cs-col-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--forest);
+      margin-bottom: 0.65rem;
+    }
+    .cs-col p {
+      font-size: 0.92rem;
+      color: var(--text-mid);
+      line-height: 1.75;
+    }
+    .cs-deliverables {
+      padding: 1.25rem 2rem;
+      background: var(--bg);
+      border-top: 1px solid var(--rule);
+    }
+    .cs-del-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-lt);
+      margin-bottom: 0.65rem;
+    }
+    .cs-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .cs-chip {
+      font-size: 0.78rem;
+      color: var(--sky);
+      background: var(--white);
+      border: 1px solid var(--sky);
+      padding: 0.22rem 0.75rem;
+    }
+    #about { background: var(--white); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .about-aside {
+      position: sticky;
+      top: 5.5rem;
+    }
+    .about-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 0.2rem;
+      letter-spacing: -0.01em;
+    }
+    .about-role {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--forest);
+      margin-bottom: 1.5rem;
+    }
+    .about-divider {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .about-divider-line { width: 28px; height: 1px; background: var(--gold); }
+    .about-divider-dot  { width: 4px; height: 4px; border-radius: 50%; background: var(--gold); }
+    .about-pullquote {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--mauve);
+      line-height: 1.65;
+      margin-bottom: 0.75rem;
+    }
+    .about-attribution {
+      font-size: 0.78rem;
+      color: var(--text-lt);
+      line-height: 1.5;
+    }
+    .about-body p {
+      font-size: 1rem;
+      color: var(--text-mid);
+      line-height: 1.9;
+      margin-bottom: 1.4rem;
+    }
+    .about-body p:last-child { margin-bottom: 0; }
+    #contact {
+      background: var(--dark);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    #contact .eyebrow    { color: var(--sky-lt); }
+    #contact .section-title { color: var(--white); }
+    #contact .rule-line  { background: var(--gold); }
+    #contact .rule-dot   { background: var(--gold); }
+    #contact .section-rule { justify-content: center; }
+    #contact .container {
+      position: relative;
+      z-index: 2;
+    }
+    .contact-waves-top {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 90px;
+      overflow: hidden;
+      z-index: 1;
+      opacity: 0.8;
+    }
+    .contact-body {
+      font-size: 1rem;
+      color: rgba(250,250,248,0.5);
+      max-width: 500px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.85;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 3rem;
+      align-items: start;
+      text-align: left;
+      margin: 3rem 0 2.5rem;
+    }
+    .contact-col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.1rem;
+    }
+    .contact-col-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--white);
+      letter-spacing: -0.01em;
+    }
+    .contact-col-body {
+      font-size: 0.95rem;
+      color: rgba(250,250,248,0.5);
+      line-height: 1.8;
+    }
+    .contact-col-note {
+      font-size: 0.78rem;
+      color: rgba(250,250,248,0.3);
+      letter-spacing: 0.02em;
+    }
+    .contact-col-divider {
+      width: 1px;
+      align-self: stretch;
+      background: rgba(250,250,248,0.1);
+    }
+    .contact-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+    }
+    .contact-cta-primary {
+      display: inline-block;
+      background: var(--forest);
+      color: var(--white);
+      padding: 1rem 2.8rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .contact-cta-primary:hover { background: var(--forest-lt); }
+    .contact-cta-secondary {
+      display: inline-block;
+      background: transparent;
+      color: var(--gold-lt);
+      border: 1px solid rgba(212,184,32,0.45);
+      padding: 0.95rem 2.7rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+    .contact-cta-secondary:hover {
+      background: rgba(212,184,32,0.1);
+      border-color: var(--gold-lt);
+    }
+    .contact-or {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(250,250,248,0.2);
+    }
+    .contact-email {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--gold-lt);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(212,184,32,0.3);
+      padding-bottom: 0.15rem;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .contact-email:hover {
+      color: var(--white);
+      border-color: rgba(250,250,248,0.3);
+    }
+    .contact-footnote {
+      font-size: 0.78rem;
+      color: rgba(250,250,248,0.18);
+      letter-spacing: 0.06em;
+    }
+    footer {
+      background: var(--dark);
+      border-top: 1px solid rgba(250,250,248,0.05);
+      padding: 2rem;
+      text-align: center;
+    }
+    footer p { font-size: 0.78rem; color: rgba(250,250,248,0.2); }
+    footer span { color: rgba(250,250,248,0.4); }
+    @media (max-width: 680px) {
+      nav { padding: 0 1.25rem; }
+      .nav-links { display: none; }
+      section { padding: 4rem 1.25rem; }
+      .problem-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .cs-body { grid-template-columns: 1fr; gap: 1.5rem; }
+      .cs-header { flex-direction: column; }
+      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-aside { position: static; }
+      .contact-grid { grid-template-columns: 1fr; gap: 2.25rem; }
+      .contact-col-divider { display: none; }
+      .contact-col { align-items: center; text-align: center; }
+    }
+    .nav-brand, .hero-cta, .contact-cta-primary, .contact-cta-secondary {
+      will-change: transform;
+    }
+    .hero-cta, .contact-cta-primary, .contact-cta-secondary {
+      transition: background 0.2s, transform 0.25s ease, box-shadow 0.25s ease, border-color 0.2s, color 0.2s;
+    }
+    .hero-cta:hover, .contact-cta-primary:hover, .contact-cta-secondary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(13, 24, 37, 0.18);
+    }
+    .hero-cta:active, .contact-cta-primary:active, .contact-cta-secondary:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+    .nav-links a {
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 100%;
+      bottom: -4px;
+      height: 1px;
+      background: currentColor;
+      opacity: 0.6;
+      transition: right 0.25s ease;
+    }
+    .nav-links a:hover::after { right: 0; }
+    .service-card, .case-study {
+      transition: border-color 0.2s, transform 0.35s ease, box-shadow 0.35s ease;
+    }
+    .service-card:hover, .case-study:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(13, 24, 37, 0.08);
+    }
+    .contact-email { transition: color 0.2s, border-color 0.2s, letter-spacing 0.3s ease; }
+    .contact-email:hover { letter-spacing: 0.01em; }
+    .hero-content > * {
+      opacity: 0;
+      transform: translateY(14px);
+      animation: hero-in 0.8s ease forwards;
+    }
+    .hero-content > *:nth-child(1) { animation-delay: 0.05s; }
+    .hero-content > *:nth-child(2) { animation-delay: 0.15s; }
+    .hero-content > *:nth-child(3) { animation-delay: 0.28s; }
+    .hero-content > *:nth-child(4) { animation-delay: 0.4s; }
+    .hero-content > *:nth-child(5) { animation-delay: 0.52s; }
+    @keyframes hero-in {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-stagger.is-visible > * {
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-content > *,
+      .reveal,
+      .reveal.is-visible {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+      .service-card:hover, .case-study:hover,
+      .hero-cta:hover, .contact-cta-primary:hover, .contact-cta-secondary:hover {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="#" class="nav-brand">Siena Falls</a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Strategic Consulting for Catholic Women in Business</p>
+    <h1>You built something real.<br><em>Let’s figure out why it’s stuck.</em></h1>
+    <div class="hero-ornament">
+      <div class="hero-ornament-line"></div>
+      <div class="hero-ornament-dot"></div>
+      <div class="hero-ornament-line"></div>
+    </div>
+    <p>I take a deep, honest look at your business, then hand you a full diagnosis, clear recommendations, and a 90-day action plan, delivered in days, not months. Strategy sized to the life you actually have, not the one generic business advice assumes you have.</p>
+    <div class="hero-ctas">
+      <a href="https://calendly.com/sienafallsmedia/30min" class="hero-cta" target="_blank" rel="noopener">Book a 30-minute call</a>
+      <a href="#contact" class="hero-cta-secondary">or send a message</a>
+    </div>
+  </div>
+  <div class="hero-waves" aria-hidden="true">
+    <div class="wave wave-1">
+      <svg viewBox="0 0 2880 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,75 C120,75 240,50 360,50 C480,50 600,75 720,75 C840,75 960,100 1080,100 C1200,100 1320,75 1440,75 C1560,75 1680,50 1800,50 C1920,50 2040,75 2160,75 C2280,75 2400,100 2520,100 C2640,100 2760,75 2880,75 L2880,120 L0,120 Z" fill="rgba(43,94,58,0.22)"></path>
+      </svg>
+    </div>
+    <div class="wave wave-2">
+      <svg viewBox="0 0 2880 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,85 C160,80 320,100 480,85 C640,72 800,100 960,85 C1120,72 1280,100 1440,85 C1600,72 1760,100 1920,85 C2080,72 2240,100 2400,85 C2560,72 2720,100 2880,85 L2880,120 L0,120 Z" fill="rgba(61,126,168,0.18)"></path>
+      </svg>
+    </div>
+    <div class="wave wave-3">
+      <svg viewBox="0 0 2880 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,95 C90,90 180,100 270,95 C360,90 450,100 540,95 C630,90 720,100 810,95 C900,90 990,100 1080,95 C1170,90 1260,100 1350,95 C1440,90 1530,100 1620,95 C1710,90 1800,100 1890,95 C1980,90 2070,100 2160,95 C2250,90 2340,100 2430,95 C2520,90 2610,100 2700,95 C2790,90 2880,100 2880,95 L2880,120 L0,120 Z" fill="rgba(196,162,21,0.10)"></path>
+      </svg>
+    </div>
+  </div>
+</section>
+<section id="problem">
+  <div class="container">
+    <p class="eyebrow">Who this is for</p>
+    <h2 class="section-title reveal">You have clients. You have a track record.<br>Something still isn’t working.</h2>
+    <div class="section-rule"><div class="rule-line"></div><div class="rule-dot"></div></div>
+    <p class="section-intro reveal">The women I work with aren’t struggling because they’re bad at what they do. They’re struggling because strategy is different from execution and no one taught them how to think about the business behind the work.</p>
+    <div class="problem-grid reveal">
+      <div class="problem-item">
+        <p>“My client numbers have been declining and I’m not sure if it’s me, the market, or my messaging.”</p>
+      </div>
+      <div class="problem-item">
+        <p>“I’ve tried things, from posting more, to lowering prices, to adding services, and nothing has really moved the needle.”</p>
+      </div>
+      <div class="problem-item">
+        <p>“I know I need to position myself more clearly but I can’t see my own business clearly enough to know how.”</p>
+      </div>
+      <div class="problem-item">
+        <p>“I’m busy but I’m not growing. I don’t know what to prioritize next.”</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="services">
+  <div class="container">
+    <p class="eyebrow">Services</p>
+    <h2 class="section-title reveal">Two ways to work together</h2>
+    <div class="section-rule"><div class="rule-line"></div><div class="rule-dot"></div></div>
+    <p class="section-intro reveal">Both engagements start with a deep intake, a 34-question written questionnaire and optional discovery call, so the work is built on your actual situation, not assumptions.</p>
+    <div class="services-grid reveal">
+      <div class="service-card">
+        <div class="service-name">The Strategy Package</div>
+        <div class="service-price">$2,800</div>
+        <p class="service-desc">A complete business audit and strategy, delivered in 5–7 business days: the thinking, the plan, and the clarity. You implement.</p>
+        <ul class="service-includes">
+          <li>A clear read on how you’re coming across in the market</li>
+          <li>An honest look at what’s working, what’s not, and what’s just a distraction</li>
+          <li>Clarity on exactly who you’re for</li>
+          <li>A review of everywhere you show up — website, social, email — and what’s actually working</li>
+          <li>3–5 prioritized growth recommendations</li>
+          <li>A step-by-step 90-day action plan</li>
+        </ul>
+      </div>
+      <div class="service-card featured">
+        <div class="service-badge">Most popular</div>
+        <div class="service-name">Strategy + Implementation</div>
+        <div class="service-price">$2,800 + $1,5000 / month</div>
+        <p class="service-desc">The strategy package, plus an ongoing partner who stays in the work with you. For women who have the vision but not the bandwidth.</p>
+        <ul class="service-includes">
+          <li>Everything in the Strategy Package</li>
+          <li>Monthly strategy sessions (1 hour)</li>
+          <li>AI-assisted help with content, copy, and reviews</li>
+          <li>Email or message access anytime (48-hour response)</li>
+          <li>Quarterly progress review and plan refresh</li>
+          <li>3-month minimum engagement</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="work">
+  <div class="container">
+    <p class="eyebrow">Work</p>
+    <h2 class="section-title reveal">What the engagement looks like</h2>
+    <div class="section-rule"><div class="rule-line"></div><div class="rule-dot"></div></div>
+    <p class="section-intro reveal">Two recent engagements, one a direct client, and the other the origin case that shaped the Siena Falls model, show the depth and range of the strategy work.</p>
+    <div class="case-study reveal">
+      <div class="cs-header">
+        <div>
+          <div class="cs-label">Case Study</div>
+          <div class="cs-title">Catholic Women’s Media Platform</div>
+        </div>
+        <div class="cs-tag">Newsletter · Substack · National</div>
+      </div>
+      <div class="cs-body">
+        <div class="cs-col">
+          <div class="cs-col-label">The situation</div>
+          <p>A Catholic women’s spirituality newsletter with an established readership needed a growth strategy and revenue model. Content was strong; the business architecture wasn’t.</p>
+        </div>
+        <div class="cs-col">
+          <div class="cs-col-label">The work</div>
+          <p>A full audit of the platform, a close look at who was actually subscribing and why, a revenue SWOT, a content calendar, an email strategy to turn readers into subscribers and subscribers into revenue, and a step-by-step guide to put it all into practice.</p>
+        </div>
+        <div class="cs-col">
+          <div class="cs-col-label">The outcome</div>
+          <p>A clear picture of who was actually reading, a revenue model built around that audience, and a 90-day plan with specific content and milestones.</p>
+        </div>
+      </div>
+      <div class="cs-deliverables">
+        <div class="cs-del-label">Deliverables produced</div>
+        <div class="cs-chips">
+          <span class="cs-chip">Platform Audit</span>
+          <span class="cs-chip">Subscriber Analysis</span>
+          <span class="cs-chip">Revenue SWOT</span>
+          <span class="cs-chip">Editorial Calendar</span>
+          <span class="cs-chip">Email Strategy</span>
+          <span class="cs-chip">Step-by-Step Marketing Guide</span>
+          <span class="cs-chip">Content Performance Report</span>
+        </div>
+      </div>
+    </div>
+    <div class="case-study">
+      <div class="cs-header">
+        <div>
+          <div class="cs-label">Case Study</div>
+          <div class="cs-title">Organizational Consultant, Northern Virginia</div>
+        </div>
+        <div class="cs-tag">Service Business · Local Market · 10+ years</div>
+      </div>
+      <div class="cs-body reveal">
+        <div class="cs-col">
+          <div class="cs-col-label">The situation</div>
+          <p>An established organizational consultant with over a decade of experience was seeing client numbers decline. She had a clear brand identity, but every new client came from her personally reaching out — nothing was bringing clients in on its own.</p>
+        </div>
+        <div class="cs-col">
+          <div class="cs-col-label">The work</div>
+          <p>A discovery call, a review of her social media numbers, a look at how her website was presenting her to visitors, a review of where she was spending time trying to get seen, and a full strategy report on why clients were leaving and how to turn that around.</p>
+        </div>
+        <div class="cs-col">
+          <div class="cs-col-label">The outcome</div>
+          <p>A focused strategy built around two strong referral partnerships — realtors and senior move managers — plus a speaking program designed to turn the people who hear her talk into steady referrals.</p>
+        </div>
+      </div>
+      <div class="cs-deliverables">
+        <div class="cs-del-label">Deliverables produced</div>
+        <div class="cs-chips">
+          <span class="cs-chip">Strategy Report</span>
+          <span class="cs-chip">Social Media Review</span>
+          <span class="cs-chip">How Clients See You</span>
+          <span class="cs-chip">Speaking Handout</span>
+          <span class="cs-chip">90-Day Action Plan</span>
+          <span class="cs-chip">Referral Plan</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="about">
+  <div class="container">
+    <div class="about-grid reveal">
+      <div class="about-aside">
+        <div class="about-name">Jessica Vincent Maleski</div>
+        <div class="about-role">Founder, Siena Falls</div>
+        <div class="about-divider">
+          <div class="about-divider-line"></div>
+          <div class="about-divider-dot"></div>
+        </div>
+        <p class="about-pullquote">“She didn't seek authority; people sought her out because her clarity came from prayer, not ambition. That spirit of humble, faithful service is the founding spirit here.”</p>
+        <p class="about-attribution">On St. Catherine of Siena,<br>Doctor of the Church, 1347–1380</p>
+      </div>
+      <div class="about-body">
+        <p>Siena Falls started as a web design studio in Northern Virginia. Over time the work evolved from building platforms to advising the women behind them on how to grow what they’d built.</p>
+        <p>I work with Catholic women entrepreneurs who are past the startup phase and hitting some kind of plateau. My clients aren’t struggling because they’re bad at their work. They’re struggling because strategy is different from execution, and most of us learned execution first.</p>
+        <p>I do a deep intake on your business, make sense of what I find, and build you a strategy package: honest diagnosis, prioritized recommendations, step-by-step action plan. All delivered in 5–7 business days. The speed is real; it’s the result of using AI as a research and synthesis tool the way a lawyer uses Westlaw or a financial analyst uses Bloomberg. The thinking, the judgment, and the strategy are mine.</p>
+        <p>Siena Falls is named in honor of St. Catherine of Siena. She was a 14th-century woman who counseled popes and heads of state, dictating letters through several secretaries, all while staying rooted in humility and service. She didn't seek authority; people sought her out because her clarity came from prayer, not ambition. That spirit of humble, faithful service is the founding spirit here.</p>
+        <p>I’m also connected to <em><a href="https://mysecretismine.substack.com">My Secret is Mine</a></em>, a Catholic women’s spirituality newsletter rooted in Edith Stein’s philosophy of feminine genius. The Siena Falls model was shaped by that engagement, and by years of building websites, running analytics, and watching what actually moves the needle for small organizations trying to grow something worth growing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="contact">
+  <div class="contact-waves-top" aria-hidden="true">
+    <div class="wave wave-1">
+      <svg viewBox="0 0 2880 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,75 C120,75 240,50 360,50 C480,50 600,75 720,75 C840,75 960,100 1080,100 C1200,100 1320,75 1440,75 C1560,75 1680,50 1800,50 C1920,50 2040,75 2160,75 C2280,75 2400,100 2520,100 C2640,100 2760,75 2880,75 L2880,120 L0,120 Z" fill="rgba(43,94,58,0.22)"></path>
+      </svg>
+    </div>
+    <div class="wave wave-2">
+      <svg viewBox="0 0 2880 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,85 C160,80 320,100 480,85 C640,72 800,100 960,85 C1120,72 1280,100 1440,85 C1600,72 1760,100 1920,85 C2080,72 2240,100 2400,85 C2560,72 2720,100 2880,85 L2880,120 L0,120 Z" fill="rgba(61,126,168,0.18)"></path>
+      </svg>
+    </div>
+    <div class="wave wave-3">
+      <svg viewBox="0 0 2880 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,95 C90,90 180,100 270,95 C360,90 450,100 540,95 C630,90 720,100 810,95 C900,90 990,100 1080,95 C1170,90 1260,100 1350,95 C1440,90 1530,100 1620,95 C1710,90 1800,100 1890,95 C1980,90 2070,100 2160,95 C2250,90 2340,100 2430,95 C2520,90 2610,100 2700,95 C2790,90 2880,100 2880,95 L2880,120 L0,120 Z" fill="rgba(196,162,21,0.10)"></path>
+      </svg>
+    </div>
+  </div>
+  <div class="container">
+    <p class="eyebrow">Contact</p>
+    <h2 class="section-title reveal">Ready to talk?</h2>
+    <div class="section-rule"><div class="rule-line"></div><div class="rule-dot"></div></div>
+    <div class="contact-grid reveal">
+      <div class="contact-col">
+        <h3 class="contact-col-title">Ready to talk it through?</h3>
+        <p class="contact-col-body">If you’re a Catholic woman in business and something on this page resonated, reach out. A 30-minute conversation is enough to tell if there’s a fit.</p>
+        <a href="https://calendly.com/sienafallsmedia/30min" class="contact-cta-primary" target="_blank" rel="noopener">Book a 30-minute call</a>
+      </div>
+      <div class="contact-col-divider" aria-hidden="true"></div>
+      <div class="contact-col">
+        <h3 class="contact-col-title">Not quite ready to book?</h3>
+        <p class="contact-col-body">That’s fine! We only just met. Start with the Clarity Workbook: fifteen questions that surface where your business is actually stuck, before you invest in fixing it.</p>
+        <a href="https://sienafalls.kit.com/9e71d15e86" class="contact-cta-secondary">Download the Clarity Workbook</a>
+        <p class="contact-col-note">Takes about 15 minutes. No pitch attached.</p>
+      </div>
+    </div>
+    <div class="contact-or">or</div>
+    <a href="#" id="contact-link" class="contact-email"></a>
+    <p class="contact-footnote">Siena Falls Media LLC</p>
+  </div>
+</section>
+<footer>
+  <p><span>Siena Falls</span> · Strategic consulting for Catholic women in business · © 2026</p>
+</footer>
+<script>
+  window.addEventListener('scroll', function () {
+    var nav = document.querySelector('nav');
+    if (window.scrollY > 40) { nav.classList.add('scrolled'); }
+    else { nav.classList.remove('scrolled'); }
+  });
+  document.addEventListener('DOMContentLoaded', function () {
+    var user = 'hello', domain = 'sienafallsmedia.com';
+    var link = document.getElementById('contact-link');
+    if (link) {
+      link.href = 'mailto:' + user + '@' + domain;
+      link.textContent = user + '@' + domain;
+    }
+  });
+  (function () {
+    var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var targets = document.querySelectorAll('.reveal');
+    if (prefersReduced || !('IntersectionObserver' in window)) {
+      targets.forEach(function (el) { el.classList.add('is-visible'); });
+      return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    targets.forEach(function (el) { observer.observe(el); });
+  })();
+</script>
+</body>
+</html>
