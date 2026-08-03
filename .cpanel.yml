@@ -3,3 +3,4 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/sienafal/public_html/
     - /bin/cp -f SienaFalls_Website_index_FIXED.html $DEPLOYPATH/index.html
+    - /bin/cp -f privacy.html $DEPLOYPATH/privacy.html

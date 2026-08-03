@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Siena Falls</title>
+<meta name="description" content="How Siena Falls, LLC collects, uses, and protects your personal information.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+<!-- ══ Google Analytics 4 ══════════════════════════════════════════════
+     REPLACE G-XXXXXXXXXX below with the SienaFalls GA4 measurement ID.
+     Must match the ID in SienaFalls_Website_index_FIXED.html.
+     The guard stops it firing until a real ID is in place.
+     ═══════════════════════════════════════════════════════════════════ -->
+<script>window.SIENAFALLS_GA_ID = 'G-XXXXXXXXXX';</script>
+<script>
+  if (window.SIENAFALLS_GA_ID && window.SIENAFALLS_GA_ID.indexOf('XXXX') === -1) {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.SIENAFALLS_GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', window.SIENAFALLS_GA_ID, { anonymize_ip: true });
+  }
+</script>
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --dark:     #0D1825;
+    --bg:       #F4F5F1;
+    --bg-alt:   #E8EAE4;
+    --forest:   #2B5E3A;
+    --gold:     #C4A215;
+    --text:     #141E2A;
+    --text-mid: #3A4A58;
+    --text-lt:  #6A7A88;
+    --rule:     #C8CCC6;
+    --white:    #FAFAF8;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Lato', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--forest); text-decoration: underline; text-underline-offset: 3px; }
+  a:hover { color: var(--gold); }
+
+  .topbar {
+    background: var(--dark);
+    padding: 1.4rem 1.5rem;
+    text-align: center;
+  }
+  .topbar a {
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    letter-spacing: 0.04em;
+  }
+  .topbar a:hover { color: var(--gold); }
+
+  .page { max-width: 700px; margin: 0 auto; padding: 4rem 1.5rem 5rem; }
+
+  .eyebrow {
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--text-lt);
+    display: block; margin-bottom: 0.8rem;
+  }
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+  .updated {
+    font-size: 0.8rem; color: var(--text-lt);
+    letter-spacing: 0.04em; margin-top: 0.6rem;
+  }
+  .rule { width: 3rem; height: 2px; background: var(--gold); margin: 1.8rem 0 2.2rem; }
+  .rule--wide {
+    width: 100%; height: 1px; background: var(--rule);
+    border: 0; margin: 2.8rem 0;
+  }
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500; font-size: 1.35rem;
+    margin: 2.6rem 0 0.7rem; letter-spacing: -0.01em;
+  }
+  p { margin-bottom: 1rem; color: var(--text-mid); }
+  p.lead { font-size: 1.08rem; color: var(--text); }
+  ul { margin: 0.6rem 0 1.2rem 1.3rem; color: var(--text-mid); }
+  li { margin-bottom: 0.45rem; }
+  strong { color: var(--text); font-weight: 700; }
+
+  .callout {
+    background: var(--bg-alt);
+    border-left: 3px solid var(--forest);
+    padding: 1.2rem 1.5rem;
+    margin: 2rem 0;
+    color: var(--text-mid);
+    font-size: 0.96rem;
+  }
+  .callout strong { display: block; margin-bottom: 0.3rem; }
+
+  table.proc {
+    width: 100%; border-collapse: collapse; margin: 1rem 0 1.4rem;
+    font-size: 0.92rem;
+  }
+  table.proc th, table.proc td {
+    text-align: left; padding: 0.6rem 0.7rem;
+    border-bottom: 1px solid var(--rule); vertical-align: top;
+  }
+  table.proc th {
+    font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--text-lt); font-weight: 700;
+  }
+  table.proc td { color: var(--text-mid); }
+
+  footer {
+    background: var(--dark);
+    color: rgba(250,250,248,0.4);
+    text-align: center;
+    padding: 2.4rem 1.5rem;
+    font-size: 0.78rem;
+  }
+  footer p { color: rgba(250,250,248,0.3); margin: 0; }
+  footer a { color: rgba(250,250,248,0.45); }
+  footer a:hover { color: var(--gold); }
+  footer .frule { width: 2rem; height: 1px; background: rgba(250,250,248,0.15); margin: 0 auto 1.2rem; }
+
+  @media (max-width: 600px) {
+    .page { padding: 2.5rem 1.25rem 3.5rem; }
+    table.proc, table.proc tbody, table.proc tr, table.proc td { display: block; width: 100%; }
+    table.proc thead { display: none; }
+    table.proc tr { border-bottom: 1px solid var(--rule); padding: 0.6rem 0; }
+    table.proc td { border: 0; padding: 0.15rem 0; }
+    table.proc td:first-child { font-weight: 700; color: var(--text); }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar"><a href="index.html">Siena Falls</a></div>
+
+<main class="page">
+
+  <span class="eyebrow">Legal</span>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: August 3, 2026</p>
+  <div class="rule"></div>
+
+  <p class="lead">This site is operated by <strong>Siena Falls, LLC</strong>, a Virginia limited liability company. We collect very little, we tell you what it is, and we do not sell any of it.</p>
+
+  <div class="callout">
+    <strong>The short version</strong>
+    We collect your email address if you give it to us, the details you choose to share when you book a call, and anonymous statistics about how people find this site. We do not sell, rent, or trade your information, and we do not run advertising.
+  </div>
+
+  <hr class="rule--wide">
+
+  <h2>What we collect, and when</h2>
+
+  <p><strong>If you download a resource or join our list.</strong> Your email address, and your first name if you give it. Nothing else is required.</p>
+
+  <p><strong>If you book a call.</strong> Your name, email address, and whatever you choose to write in the booking form. Scheduling runs through Calendly, which collects this on our behalf and shows us your selected time and time zone.</p>
+
+  <p><strong>If you become a client.</strong> Business information you share with us during intake so we can do the work: revenue figures, client data, marketing history, and similar. This is confidential, it is used only to produce your strategy, and it is never used as an example without your written permission.</p>
+
+  <p><strong>Automatically, on every visit.</strong> Anonymous statistics described under <a href="#analytics">Cookies and analytics</a> below.</p>
+
+  <p>We do not process payment card details on this site. If you engage us, invoicing and payment happen through a separate provider that handles card information directly; we never see or store your card number.</p>
+
+  <h2>How we use it</h2>
+  <ul>
+    <li>To send you the resource or email you asked for</li>
+    <li>To reply to you, and to schedule and prepare for a call</li>
+    <li>To deliver consulting work you have engaged us for</li>
+    <li>To occasionally share writing, offers, or availability, if you have joined our list</li>
+  </ul>
+  <p>Every marketing email includes an unsubscribe link, and one click is enough. We do not add people to the list because they booked a call or became a client; joining is always a separate, deliberate choice.</p>
+
+  <h2>Who else handles your data</h2>
+  <p>We use a small number of outside services. Each acts as our processor and has its own privacy policy.</p>
+
+  <table class="proc">
+    <thead>
+      <tr><th>Service</th><th>What it handles</th><th>Policy</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Kit</td>
+        <td>Email list and delivery</td>
+        <td><a href="https://kit.com/privacy" target="_blank" rel="noopener">kit.com/privacy</a></td>
+      </tr>
+      <tr>
+        <td>Calendly</td>
+        <td>Call scheduling</td>
+        <td><a href="https://calendly.com/privacy" target="_blank" rel="noopener">calendly.com/privacy</a></td>
+      </tr>
+      <tr>
+        <td>Google Analytics</td>
+        <td>Anonymous site statistics</td>
+        <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+      </tr>
+      <tr>
+        <td>Google Fonts</td>
+        <td>Typefaces used on this page</td>
+        <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+      </tr>
+      <tr>
+        <td>Bluehost</td>
+        <td>Web hosting and server logs</td>
+        <td><a href="https://www.bluehost.com/privacy" target="_blank" rel="noopener">bluehost.com/privacy</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>We do not share your information with anyone else, and we will not sell it. If we are ever legally compelled to disclose something, we will tell you unless we are prohibited from doing so.</p>
+
+  <h2 id="analytics">Cookies and analytics</h2>
+  <p>We use <strong>Google Analytics 4</strong> to count visits to this site. It sets cookies in your browser and records your approximate location, your device and browser type, which pages you viewed, and how you arrived. Your IP address is anonymized before it is stored.</p>
+  <p>Google Analytics never receives your name or your email address from us, and we do not connect it to any individual person. We use it for one narrow purpose: to learn whether the people who need this work are finding it.</p>
+  <p>We do not run advertising, we do not use retargeting or advertising pixels, and we do not sell this data to anyone.</p>
+  <p><strong>To opt out</strong>, install the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics opt-out browser add-on</a>, or block cookies in your browser settings. The site works normally either way.</p>
+  <p>Links we share in emails and social posts sometimes carry a tag on the end, after a question mark, telling us which message a visit came from. The tag identifies the message, not you.</p>
+  <p>Loading fonts from Google Fonts sends your IP address to Google as a normal part of delivering the file. This is how any web font works.</p>
+
+  <h2>Your rights</h2>
+  <p>Wherever you live, you may:</p>
+  <ul>
+    <li>Ask what personal information we hold about you</li>
+    <li>Ask us to correct or delete it</li>
+    <li>Withdraw consent at any time by unsubscribing</li>
+    <li>Opt out of analytics, by either method above</li>
+  </ul>
+  <p>Residents of the EU and UK have further rights under the GDPR, including data portability and the right to complain to your national data protection authority. Residents of California have rights under the CCPA, including the right to know and the right to delete. We do not sell personal information as that term is defined under the CCPA, and we have no financial incentive program, so we will never charge you a different price for exercising these rights.</p>
+  <p>To exercise any of these, write to <a href="mailto:marketing@sienafallsmedia.com">marketing@sienafallsmedia.com</a>. We will respond within 30 days.</p>
+
+  <h2>How long we keep things</h2>
+  <p>Your email address stays on our list until you unsubscribe, after which it is removed from the active list. Client project files are kept for six years for tax and professional records, then deleted. Analytics data is held by Google for 14 months and then deleted automatically. You can request permanent deletion of your personal data at any time.</p>
+
+  <h2>Children</h2>
+  <p>This site is meant for adults in business. We do not knowingly collect information from anyone under 16. If you believe a child has given us their information, write to us and we will delete it.</p>
+
+  <h2>Where your data is held</h2>
+  <p>We operate from the United States, and our providers store data on servers in the United States. If you are writing to us from outside the US, your information will be transferred there.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If we make a material change, we will update the date at the top of this page. We will not bury it.</p>
+
+  <hr class="rule--wide">
+
+  <p style="font-size:0.9rem;">Questions about any of this? Write to <a href="mailto:marketing@sienafallsmedia.com">marketing@sienafallsmedia.com</a>.</p>
+  <p style="font-size:0.9rem;">Siena Falls, LLC · Virginia, USA</p>
+
+</main>
+
+<footer>
+  <div class="frule"></div>
+  <p><a href="index.html">Siena Falls</a> · Strategic consulting for Catholic women in business · © 2026</p>
+</footer>
+
+</body>
+</html>
