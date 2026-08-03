@@ -607,6 +607,14 @@
       text-align: center;
     }
     footer p { font-size: 0.78rem; color: rgba(250,250,248,0.2); }
+    footer .footer-link {
+      color: rgba(250,250,248,0.62);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      letter-spacing: 0.03em;
+      transition: color 0.2s ease;
+    }
+    footer .footer-link:hover, footer .footer-link:focus-visible { color: var(--gold-lt); }
     footer span { color: rgba(250,250,248,0.4); }
     @media (max-width: 680px) {
       nav { padding: 0 1.25rem; }
@@ -945,7 +953,7 @@
 </section>
 <footer>
   <p><span>Siena Falls</span> · Strategic consulting for Catholic women in business · © 2026</p>
-  <p style="margin-top:0.5rem;"><a href="privacy.html" style="color:rgba(250,250,248,0.4);text-decoration:underline;text-underline-offset:3px;">Privacy Policy</a></p>
+  <p style="margin-top:0.6rem;"><a href="privacy.html" class="footer-link">Privacy Policy</a></p>
 </footer>
 <script>
   window.addEventListener('scroll', function () {
